@@ -1,0 +1,10 @@
+language: php
+php:
+    - 7.0
+    - 7.1
+install:
+    - composer self-update && composer --version
+    - composer install
+script:
+    - vendor/bin/phpunit --verbose --coverage-clover=coverage.clover
+    - vendor/bin/phpcs --standard=PSR2 --extensions=php src tests

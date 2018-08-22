@@ -1,0 +1,17 @@
+{
+    "continentCode": "NA",
+    "continentName": "North America",
+    "countryIsoCode": "US",
+    "countryName": "United States",
+    "mostSpecificSubdivisionIsoCode": null,
+    "mostSpecificSubdivisionName": null,
+    "cityName": null,
+    "postalCode": null,
+    "metroCode": null,
+    "latitude": 37.751,
+    "longitude": -97.822,
+    "timeZone": null,
+    "query": {
+        "ip": "8.8.8.8"
+    }
+}
