@@ -1,14 +1,14 @@
 {
-    "name": "dominionenterprises/geoip",
+    "name": "travelmediagroup/geoip",
     "type": "library",
     "description": "A self-controlled, self-hosted GeoLocation lookup service.",
-    "homepage": "http://github.com/dominionenterprises/GeoIP",
+    "homepage": "http://github.com/travelmediagroup/GeoIP",
     "license": "MIT",
     "authors": [
         {
             "name": "Justin Reherman",
             "email": "justin.reherman@travelmediagroup.com",
-            "homepage": "http://github.com/wackyMole",
+            "homepage": "http://github.com/j4nr6n",
             "role": "Developer"
         }
     ],
