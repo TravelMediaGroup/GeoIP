@@ -6,10 +6,10 @@
  * file that was distributed with this source code.
  */
 
-namespace TravelMediaGroupTest\GeoIP\Unit;
+namespace Test\GeoIP\Unit;
 
-use \TravelMediaGroup\GeoIP\Server;
-use \TravelMediaGroup\GeoIP\TestCase;
+use TravelMediaGroup\GeoIP\Server;
+use TravelMediaGroup\GeoIP\TestCase;
 
 class ServerTest extends TestCase
 {

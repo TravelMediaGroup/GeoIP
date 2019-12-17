@@ -10,7 +10,7 @@ namespace TravelMediaGroup\GeoIP;
 
 class Server
 {
-    /** @var \TravelMediaGroup\GeoIP\Adapter */
+    /** @var Adapter */
     private $adapter;
 
     /** @var string */
@@ -26,7 +26,7 @@ class Server
     private $headers = ['Content-Type: application/json'];
 
     /**
-     * @param \TravelMediaGroup\GeoIP\Adapter $adapter
+     * @param Adapter $adapter
      */
     public function __construct(Adapter $adapter)
     {
@@ -100,7 +100,7 @@ class Server
     }
 
     /**
-     * @return \TravelMediaGroup\GeoIP\Adapter
+     * @return Adapter
      */
     public function getAdapter()
     {

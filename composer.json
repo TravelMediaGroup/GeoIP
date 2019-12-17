@@ -13,13 +13,14 @@
         }
     ],
     "require": {
-        "geoip2/geoip2": "~2.4",
-        "php": ">=7.0"
+        "php": "^7.1",
+        "ext-json": "*",
+        "geoip2/geoip2": "~2.10"
     },
     "require-dev": {
         "internations/http-mock": "dev-master",
-        "phpunit/phpunit": "~6.1",
-        "squizlabs/php_codesniffer": "~3.0"
+        "phpunit/phpunit": "~7.5",
+        "squizlabs/php_codesniffer": "~3.5"
     },
     "autoload": {
         "psr-4": {
@@ -28,7 +29,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "TravelMediaGroupTest\\": "tests/"
+            "Test\\": "tests/"
         }
     },
     "scripts": {

@@ -6,9 +6,9 @@
  * file that was distributed with this source code.
  */
 
-namespace TravelMediaGroupTest\GeoIP\Acceptance;
+namespace Test\GeoIP\Acceptance;
 
-use \TravelMediaGroup\GeoIP\TestCase;
+use TravelMediaGroup\GeoIP\TestCase;
 
 class ServiceTest extends TestCase
 {

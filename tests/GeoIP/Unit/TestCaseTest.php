@@ -6,15 +6,16 @@
  * file that was distributed with this source code.
  */
 
-namespace TravelMediaGroupTest\GeoIP\Unit;
+namespace Test\GeoIP\Unit;
 
-use \TravelMediaGroup\GeoIP\TestCase;
+use PHPUnit\Framework\MockObject\MockObject;
+use TravelMediaGroup\GeoIP\TestCase;
 
 class TestCaseTest extends TestCase
 {
     public function testServerIsMock()
     {
-        $this->assertInstanceOf('\PHPUnit_Framework_MockObject_MockObject', $this->getServer());
+        $this->assertInstanceOf(MockObject::class, $this->getServer());
     }
 
     public function testAdapterHasData()

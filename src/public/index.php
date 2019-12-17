@@ -12,6 +12,10 @@ chdir(dirname(dirname(__DIR__)));
 // pull in dependencies
 require 'vendor/autoload.php';
 
+use GeoIp2\Database\Reader;
+use TravelMediaGroup\GeoIP\Adapter;
+use TravelMediaGroup\GeoIP\Server;
+
 // set the default date if necessary
 if (date_default_timezone_get() == 'UTC') {
     date_default_timezone_set('America/New_York');
@@ -19,7 +23,7 @@ if (date_default_timezone_get() == 'UTC') {
 
 // capture any issues with the data
 try {
-    $reader = new \GeoIp2\Database\Reader('db/GeoLite2-City.mmdb');
+    $reader = new Reader('db/GeoLite2-City.mmdb');
 } catch (\InvalidArgumentException $ex) {
     die('Could not read location information.');
 } catch (\Exception $ex) {
@@ -27,8 +31,8 @@ try {
 }
 
 // instantiate and run the server
-$adapter = new \TravelMediaGroup\GeoIP\Adapter($reader);
-$server = new \TravelMediaGroup\GeoIP\Server($adapter);
+$adapter = new Adapter($reader);
+$server = new Server($adapter);
 
 $server->run();
 

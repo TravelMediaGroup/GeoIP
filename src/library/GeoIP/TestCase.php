@@ -8,19 +8,20 @@
 
 namespace TravelMediaGroup\GeoIP;
 
-use \TravelMediaGroup\GeoIP;
-use \GeoIp2\Database\Reader;
+use PHPUnit\Framework\MockObject\MockObject;
+use TravelMediaGroup\GeoIP;
+use GeoIp2\Database\Reader;
 
 class TestCase extends \PHPUnit\Framework\TestCase
 {
-    /** @var \PHPUnit_Framework_MockObject_MockObject */
+    /** @var MockObject */
     protected $server;
 
-    /** @var \TravelMediaGroup\GeoIP\Adapter */
+    /** @var Adapter */
     protected $adapter;
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject
+     * @return MockObject
      */
     protected function getServer()
     {
@@ -67,8 +68,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
     protected function getFixtureData()
     {
         $fixture = 'tests/fixture.json';
-        $data = json_decode(file_get_contents($fixture), true);
 
-        return $data;
+        return json_decode(file_get_contents($fixture), true);
     }
 }

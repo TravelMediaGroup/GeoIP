@@ -8,17 +8,17 @@
 
 namespace TravelMediaGroup\GeoIP;
 
-use \GeoIp2\Database\Reader;
+use GeoIp2\Database\Reader;
 
 class Adapter
 {
     /**
-     * @var \GeoIp2\Database\Reader
+     * @var Reader
      */
     private $reader;
 
     /**
-     * @param \GeoIp2\Database\Reader $reader
+     * @param Reader $reader
      */
     public function __construct(Reader $reader)
     {
@@ -67,7 +67,7 @@ class Adapter
     }
 
     /**
-     * @return \GeoIp2\Database\Reader
+     * @return Reader
      */
     public function getReader()
     {

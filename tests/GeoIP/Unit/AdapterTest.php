@@ -6,9 +6,9 @@
  * file that was distributed with this source code.
  */
 
-namespace TravelMediaGroupTest\GeoIP\Unit;
+namespace Test\GeoIP\Unit;
 
-use \TravelMediaGroup\GeoIP\TestCase;
+use TravelMediaGroup\GeoIP\TestCase;
 
 class AdapterTest extends TestCase
 {
@@ -40,11 +40,10 @@ class AdapterTest extends TestCase
         $this->assertSame($expectedValue, $result);
     }
 
-    /**
-     * @expectedException \Exception
-     */
     public function testFindByIpWithInvalidIp()
     {
+        $this->expectException(\Exception::class);
+
         $ip = '1234567890';
         
         $this->getAdapter()->findByIp($ip);
