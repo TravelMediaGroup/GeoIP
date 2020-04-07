@@ -31,18 +31,5 @@
         "psr-4": {
             "Test\\": "tests/"
         }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "echo \"Downloading the MaxMind database...\"",
-            "mkdir -pm a+w db",
-            "wget http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz -P db/ -q",
-            "echo \"Extracting the MaxMind database!\"",
-            "gunzip db/GeoLite2-City.mmdb.gz &> /dev/null"
-        ],
-        "cleanup": [
-            "rm -rf vendor",
-            "rm -rf db"
-        ]
     }
 }
